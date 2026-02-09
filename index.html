@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <header class="card__header">
+        <h1 class="title">Calculadora de IMC</h1>
+        <p class="subtitle">Digite seu peso e altura para calcular.</p>
+      </header>
+
+      <form class="form" id="bmiForm" autocomplete="off">
+        <div class="row">
+          <label class="field">
+            <span class="label">Peso (kg)</span>
+            <input class="input" id="weight" type="number" inputmode="decimal" step="0.1" min="1" placeholder="ex: 65" required />
+          </label>
+
+          <label class="field">
+            <span class="label">Altura (m)</span>
+            <input class="input" id="height" type="number" inputmode="decimal" step="0.01" min="0.5" placeholder="ex: 1.80" required />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Calcular</button>
+          <button class="btn btn-ghost" type="button" id="resetBtn">Limpar</button>
+        </div>
+      </form>
+
+      <div class="result" aria-live="polite">
+        <div class="result__line">
+          <span class="result__label">Seu IMC</span>
+          <strong class="result__value" id="bmiValue">—</strong>
+        </div>
+        <div class="result__hint" id="bmiHint">Preencha os campos e clique em “Calcular”.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
